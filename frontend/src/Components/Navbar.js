@@ -54,6 +54,8 @@ const Navbar = () => {
                 }
             </nav>
             <div className='footer'>
+                <p>ต้องการรับการแจ้งเตือนสถานกาณ์โควิดผ่าน Line</p>
+                <button>Line Notify</button>
             </div>
             <Outlet />
         </div>
