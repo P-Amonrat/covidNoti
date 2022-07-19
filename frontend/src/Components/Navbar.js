@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Outlet, Link } from "react-router-dom";
 import "./navbar.css";
 import axios from "axios";
+import { AiOutlineCopyright } from "react-icons/ai";
 
 const Navbar = () => {
   const [showSecondNav, setShowSecondNav] = useState(false);
@@ -14,12 +15,12 @@ const Navbar = () => {
 
   const [date, setDate] = useState();
 
-  const covidNoti = async () => {
-    const id = localStorage.getItem("id");
-    const res = await axios.post(`/noti/notify`, {
-      id,
-    });
-  };
+  // const covidNoti = async () => {
+  //   const id = localStorage.getItem("id");
+  //   const res = await axios.post(`/noti/notify`, {
+  //     id,
+  //   });
+  // };
 
   useEffect(() => {
     const userData = async () => {
@@ -77,10 +78,10 @@ const Navbar = () => {
         )}
       </nav>
       <div className="footer">
-        <p>ต้องการรับการแจ้งเตือนสถานกาณ์โควิดผ่าน Line</p>
-        <a href="https://notify-bot.line.me/oauth/authorize?response_type=code&client_id=9uUC0gIhSYXtcYeDXHcG6X&redirect_uri=https://14f0-27-55-72-235.ap.ngrok.io&scope=notify&state=GFLiykaRFw2dWLo1odJskAIi8XnDDl4fzoRnFVGlZn9">
-          LINE Notify
-        </a>
+        <p>Create by Janista Sihirunwong & Amonrat Pongka</p>
+        <p>
+          <AiOutlineCopyright></AiOutlineCopyright> 2022
+        </p>
       </div>
       <Outlet />
     </div>

@@ -4,6 +4,7 @@ import axios from "axios";
 import "./home.css";
 import { queryParams } from "../utils/StringUtils";
 import { useLocation } from "react-router-dom";
+import { AiOutlineDoubleRight } from "react-icons/ai";
 
 const Home = () => {
   const [covidCase, setCovidCase] = useState();
@@ -80,7 +81,12 @@ const Home = () => {
     userData();
   }, []);
 
-  //   console.log({ user });
+  const covidNotify = async () => {
+    const id = localStorage.getItem("id");
+    const res = await axios.post(`/noti/notify`, {
+      id,
+    });
+  };
 
   return (
     <div className="home-bg">
@@ -118,8 +124,21 @@ const Home = () => {
               <p>{newDeathed}</p>
             </div>
           </div>
-          <button onClick={() => covidNoti()}>
-            ข้อควรปฏิบัติเมืิ่อเป็นโควิด
+        </div>
+      </div>
+      <div className="home-footer">
+        <div className="text">
+          <p>ต้องการรับการแจ้งเตือนสถานกาณ์โควิดผ่าน Line ?</p>
+        </div>
+        <div>
+          <button className="lineNoti">
+            <a href="https://notify-bot.line.me/oauth/authorize?response_type=code&client_id=9uUC0gIhSYXtcYeDXHcG6X&redirect_uri=https://14f0-27-55-72-235.ap.ngrok.io&scope=notify&state=GFLiykaRFw2dWLo1odJskAIi8XnDDl4fzoRnFVGlZn9">
+              LINE Notify
+            </a>
+          </button>
+          <AiOutlineDoubleRight></AiOutlineDoubleRight>
+          <button className="sendNoti" onClick={() => covidNoti()}>
+            ข้อควรปฏิบัติเมื่อเป็นโควิด
           </button>
         </div>
       </div>

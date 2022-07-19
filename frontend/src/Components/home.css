@@ -1,56 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@200;300&family=Kanit:wght@100&family=Kodchasan:wght@200&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Athiti:wght@200;300&family=Kanit:wght@100&family=Kodchasan:wght@200&display=swap");
 @media (max-width: 428px) {
     .home-bg {
         position: relative;
         height: 800px;
         z-index: 1;
     }
-
     .home {
         display: flex;
         justify-content: space-around;
         align-items: center;
         position: relative;
         position: absolute;
-        top: 20%;
+        top: 15%;
         left: 3%;
-        font-family: 'Athiti', sans-serif;
-        font-family: 'Kanit', sans-serif;
+        font-family: "Athiti", sans-serif;
+        font-family: "Kanit", sans-serif;
         width: 400px;
         font-weight: 1000;
     }
-
     .left-text {
         margin-right: 20px;
     }
-
     .left-text h1 {
         color: rgb(151, 0, 81);
         font-weight: bolder;
         font-size: 40px;
         margin: 0;
     }
-
     .left-text h5 {
         font-size: 16px;
         margin: 0;
         color: rgb(255, 255, 255);
         font-weight: 1000;
     }
-
     img.thailand-flag {
         width: 20px;
         height: 15px;
         margin-left: 5px;
     }
-    
     .covidCase-box {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
     .top-box {
         background: palevioletred;
         width: 200px;
@@ -62,15 +54,13 @@
         flex-direction: column;
         border-radius: 20px;
     }
-
     .top-box h1,
     .top-box p {
         margin: 0px;
     }
-    
     .newCovidCase,
     .newRecovered,
-    .newDeathed  {
+    .newDeathed {
         background: rgb(252, 169, 197);
         width: 130px;
         height: 40px;
@@ -79,7 +69,6 @@
         align-items: center;
         border-radius: 10px;
     }
-    
     .left-bottom-box {
         background: rgb(80, 227, 183);
         width: 200px;
@@ -92,12 +81,10 @@
         border-radius: 20px;
         margin-top: 20px;
     }
-
     .left-bottom-box h1,
     .left-bottom-box p {
         margin: 0;
     }
-    
     .newRecovered {
         background: rgb(169, 252, 205);
         width: 130px;
@@ -107,7 +94,6 @@
         align-items: center;
         border-radius: 10px;
     }
-    
     .right-bottom-box {
         background: rgb(227, 80, 104);
         width: 200px;
@@ -120,26 +106,64 @@
         border-radius: 20px;
         margin-top: 20px;
     }
-
     .right-bottom-box h1,
     .right-bottom-box p {
         margin: 0;
     }
-    
     .newDeathed {
         background: rgb(224, 159, 170);
         width: 130px;
         height: 40px;
         display: flex;
-        justify-content: space-around;;
+        justify-content: space-around;
         align-items: center;
         border-radius: 10px;
+    }
+    .home-footer {
+        position: absolute;
+        bottom: 0%;
+        left: 10%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    button.lineNoti {
+        margin-right: 10px;
+        background-color: rgb(85, 194, 30);
+        box-shadow: 2px 2px 2px rgb(0, 0, 0);
+        font-weight: bolder;
+        font-size: 16px;
+        border-radius: 20px;
+        width: 120px;
+        height: 40px;
+    }
+    button.lineNoti a {
+        color: white;
+    }
+    button.sendNoti {
+        margin-left: 10px;
+        background-color: rgb(85, 194, 30);
+        box-shadow: 2px 2px 2px rgb(0, 0, 0);
+        font-weight: bolder;
+        font-size: 16px;
+        border-radius: 20px;
+        width: 200px;
+        height: 40px;
+        color: white;
+    }
+    .text p {
+        font-size: 16px;
+        font-weight: 900;
     }
 }
 
 @media (max-width: 414px) {
     .home {
         left: 1.8%;
+    }
+    .home-footer {
+        left: 7%;
     }
 }
 
@@ -153,6 +177,9 @@
     .right-bottom-box {
         width: 180px;
     }
+    .home-footer {
+        left: 4%;
+    }
 }
 
 @media (max-width: 375px) {
@@ -164,6 +191,9 @@
     .left-bottom-box,
     .right-bottom-box {
         width: 170px;
+    }
+    .home-footer {
+        left: 2.5%;
     }
 }
 
@@ -177,5 +207,22 @@
     .right-bottom-box {
         width: 165px;
     }
+    .home-footer {
+        left: 5%;
+    }
+    button.lineNoti {
+        margin-right: 10px;
+        font-size: 14px;
+        border-radius: 20px;
+        width: 105px;
+        height: 30px;
+    }
+    button.sendNoti {
+        margin-left: 10px;
+        font-size: 14px;
+        border-radius: 20px;
+        width: 185px;
+        height: 30px;
+        color: white;
+    }
 }
-
