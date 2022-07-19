@@ -1,15 +1,18 @@
-import './App.css';
+import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import Home from './Components/Home';
-import Navbar from './Components/Navbar';
-import Central from './Components/Central';
-import North from './Components/North';
-import South from './Components/South';
-import East from './Components/East';
-import NorthEast from './Components/NorthEast';
-import West from './Components/West';
+import Home from "./Components/Home";
+import Navbar from "./Components/Navbar";
+import Central from "./Components/Central";
+import North from "./Components/North";
+import South from "./Components/South";
+import East from "./Components/East";
+import NorthEast from "./Components/NorthEast";
+import West from "./Components/West";
+import axios from "axios";
 
 function App() {
+  axios.defaults.baseURL = "http://localhost:3000";
+
   return (
     <Routes>
       <Route path="/" element={<Navbar />}>
@@ -19,7 +22,7 @@ function App() {
         <Route path="south" element={<South />} />
         <Route path="east" element={<East />} />
         <Route path="northEast" element={<NorthEast />} />
-        <Route path="west" element={<West/>} />
+        <Route path="west" element={<West />} />
       </Route>
     </Routes>
   );
